@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Custom Journey Builder Activity</title>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/require.js"></script>
+    <script type="text/javascript">
+        (function() {
+            var config = {
+                baseUrl: 'js'
+            };
+
+            var dependencies = [
+                'customActivity'
+            ];
+
+            require(config, dependencies);
+        })();
+    </script>
+
+    <!--Styles-->
+    <style type="text/css">
+        body {
+            padding: 20px;
+            margin: 0;
+        }
+        .step {
+            display: none;
+        }
+        #step1 {
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+<div id="step1" class="step">
+    <!--20220331 V1.2-->
+    <div>
+        Enter your message: <br/>
+        <textarea id="textareamessage" rows="4" cols="50"></textarea><br/>
+        <button id="toggleLastStep">Toggle Last Step</button>
+    </div>
+</div>
+<div id="step2" class="step">
+    Here's a second page with some info on it.
+    <label for="imglink">Enter your img link:</label>
+    <input type="text" id="imglink" name="imglink"></inputt>
+
+</div>
+<div id="step3" class="step">
+    You chose the message: <div id="message"></div></br>
+    You chose the ImgUrl: <div id="imgUrltext"></div>
+</div>
+<div id="step4" class="step">
+    Hey, here's a fourth step, just for you.  Toggle this on or off from step 1.
+</div>
+</body>
+</html>
